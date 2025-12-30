@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Productivity Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Authentication Screen -->
+    <div id="auth-container" class="auth-container">
+        <div class="auth-card">
+            <h1>Productivity Dashboard</h1>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required autocomplete="off">
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" id="auth-btn">Login</button>
+                <button type="button" id="toggle-auth">Switch to Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard hidden">
+        <header>
+            <h1>Personal Productivity Dashboard</h1>
+            <div class="profile">
+                <img id="profile-img" src="https://via.placeholder.com/50" alt="Profile">
+                <span id="user-name"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="tasks">
+                <h2>Tasks</h2>
+                <input type="text" id="task-input" placeholder="Add new task...">
+                <button id="add-task-btn">Add Task</button>
+                <ul id="task-list"></ul>
+            </section>
+
+            <section class="notes">
+                <h2>Notes</h2>
+                <textarea id="note-input" rows="8" placeholder="Write your notes here..."></textarea>
+                <button id="save-note-btn">Save Notes</button>
+                <div id="notes-display"></div>
+            </section>
+
+            <section class="weather">
+                <h2>Weather & Location</h2>
+                <div id="location-info"></div>
+                <div id="weather-info"></div>
+            </section>
+
+            <section class="quote">
+                <h2>Quote of the Day</h2>
+                <p id="quote-text"></p>
+            </section>
+
+            <section class="timer">
+                <h2>Focus Timer (Pomodoro)</h2>
+                <div class="timer-controls">
+                    <input type="number" id="timer-minutes" value="25" min="1">
+                    <span>minutes</span>
+                    <button id="start-timer-btn">Start Timer</button>
+                </div>
+                <div id="timer-display">25:00</div>
+            </section>
+
+            <section class="profile-upload">
+                <h2>Profile Image</h2>
+                <input type="file" id="profile-upload" accept="image/*">
+                <p>Upload a new profile picture</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
